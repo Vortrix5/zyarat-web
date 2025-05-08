@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Shadcn UI Light Mode Variables - This should be the primary set */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 221.2 83.2% 53.3%; /* New: Vibrant Blue */
+    --primary-foreground: 0 0% 100%; /* New: White text on blue */
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 221.2 83.2% 53.3%; /* New: Teal/Cyan accent */
+    --accent-foreground: 0 0% 100%; /* New: White text on accent */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 120 60% 40%; /* New: Green for success */
+    --success-foreground: 0 0% 100%; /* New: White text on success */
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 221.2 83.2% 53.3%; /* New: Ring matches new primary */
+    --chart-1: 220 80% 60%; /* Bright Blue */
+    --chart-2: 160 70% 50%; /* Teal */
+    --chart-3: 45 90% 55%;  /* Orange-Yellow */
+    --chart-4: 300 75% 60%; /* Purple */
+    --chart-5: 0 80% 65%;   /* Red */
+    --radius: 0.5rem;
+
+    /* Custom Sidebar Light Mode Variables */
+    --sidebar-background: 0 0% 98%; /* Example: Slightly off-white */
+    --sidebar-foreground: 240 5.3% 26.1%; /* Example: Dark gray for text */
+    --sidebar-border: 0 0% 89.8%; /* Match general border or define specifically */
+    --sidebar-accent: 0 0% 96.1%; /* Match general accent or define specifically */
+    --sidebar-accent-foreground: 0 0% 9%; /* Match general accent-foreground */
+  }
+
+  .dark {
+    /* Shadcn UI Dark Mode Variables - This should be the primary set */
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217.2 91.2% 59.8%; /* New: Brighter Blue for dark mode */
+    --primary-foreground: 0 0% 10%; /* New: Dark text on blue */
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 190 70% 35.1%; /* New: Darker Teal/Cyan accent for dark mode */
+    --accent-foreground: 0 0% 98%; /* New: Light text on accent */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 217.2 91.2% 59.8%; /* New: Ring matches new primary */
+    --chart-1: 220 85% 65%; /* Lighter Bright Blue */
+    --chart-2: 160 75% 55%; /* Lighter Teal */
+    --chart-3: 45 95% 60%;  /* Lighter Orange-Yellow */
+    --chart-4: 300 80% 65%; /* Lighter Purple */
+    --chart-5: 0 85% 70%;   /* Lighter Red */
+
+    /* Custom Sidebar Dark Mode Variables */
+    --sidebar-background: 0 0% 7%; /* Example: Slightly darker than main dark background */
+    --sidebar-foreground: 0 0% 95%; /* Example: Light gray for text */
+    --sidebar-border: 0 0% 14.9%; /* Match general border or define specifically */
+    --sidebar-accent: 0 0% 14.9%; /* Match general accent or define specifically */
+    --sidebar-accent-foreground: 0 0% 98%; /* Match general accent-foreground */
+  }
+}
+
+html {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  * {
+    @apply border-border; /* Uses the CSS variable --border */
+  }
+  body {
+    @apply bg-background text-foreground; /* Uses CSS variables --background and --foreground */
+    margin: 0; /* Keep body margin reset */
+    min-height: 100vh; /* Useful for full-height layouts */
+  }
+}
+
+a {
+  font-weight: 500;
+  text-decoration: inherit;
+}
+
+h1 {
+  font-size: 3.2em; /* Consider using Tailwind's font size utilities like text-4xl, text-5xl */
+  line-height: 1.1;
+}
